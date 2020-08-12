@@ -1,0 +1,175 @@
+/*
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://www.58img.com/
+ *通用标签重置
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: #000000;
+}
+a{
+    text-decoration: none!important;
+}
+html {
+    font-family:PingFangSC-Regular,microsoft yahei,Helvetica Neue,Helvetica,arial,STHeiTi,sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+    line-height: 1;
+    height: 100%;
+    overflow: hidden;
+    /*font: 14px/1 customFont,PingFangSC-Regular,microsoft yahei,Helvetica Neue,Helvetica,arial,STHeiTi,sans-serif*/
+    font-family:PingFangSC-Regular,microsoft yahei,Helvetica Neue,Helvetica,arial,STHeiTi,sans-serif;
+
+}
+
+
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: #6c6c6c;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0067b8;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(201, 201, 202, 1);
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(162, 162, 163, 1);
+}
+/*chrome--------------------------------------------end*/
+/*IE--------------------------------------------start*/
+* {
+    /*三角箭头的颜色*/
+    scrollbar-arrow-color: #c0c4cc;
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: #A2A2A3;
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #A2A2A3;
+    /*滚动条阴影*/
+    scrollbar-shadow-color: #A2A2A3;
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #f4f4f5;
+    /*滚动条3d亮色阴影边框的外观颜色——左边和上边的阴影色*/
+    scrollbar-3dlight-color: #A2A2A3;
+    /*滚动条3d暗色阴影边框的外观颜色——右边和下边的阴影色*/
+    scrollbar-darkshadow-color: #A2A2A3;
+    /*滚动条基准颜色*/
+    scrollbar-base-color: #f4f4f5;
+}
+/*IE--------------------------------------------end*/
+
+/*input, select {*/
+/*    vertical-align:middle;*/
+/*}*/
+

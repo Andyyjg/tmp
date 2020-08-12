@@ -5,6 +5,7 @@ import store from './store'
 import api from './api/index'
 import global from "./lib/global";
 import ElementUI from 'element-ui';
+import './assets/css/reset.css'
 import 'element-ui/lib/theme-chalk/index.css';
 import filter from './utils/filter.js'//管道注册
 Vue.prototype.$api = api
