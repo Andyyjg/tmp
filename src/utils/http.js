@@ -4,20 +4,13 @@ import router from "../router";
 
 
 axios.defaults.timeout = 360000
-axios.defaults.baseURL = ''
+axios.defaults.baseURL = '/api'
 axios.defaults.headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
     /*    'authorization': store.state.login.token,
         'userId': store.state.login.userId,*/
 }
 axios.defaults.transformRequest = [function (data) {
-    if (data) {
-        if (data.typeData != 'upload') {
-            data = qs.stringify(data)
-        }
-    }
-
-
     return data
 }]
 //http request 拦截器

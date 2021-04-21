@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     项目初始化
   </div>
 </template>
@@ -8,10 +8,20 @@
 // @ is an alias to /src
 
 
+
 export default {
-  name: 'Home',
-  components: {
+  name: 'Add',
+  data () {
+    return {
+
+    }
+  },
+  methods: {
+
 
   }
 }
 </script>
+<style scoped>
+
+</style>

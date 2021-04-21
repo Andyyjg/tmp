@@ -1,5 +1,5 @@
 import service from '../utils/http'
-
+import qs from 'qs'
 /**
  * 封装get请求
  * @param url
@@ -7,7 +7,7 @@ import service from '../utils/http'
  * @returns {Promise}
  */
 export function get(url, data,config={}) {
-    url='/api'+url
+
     return new Promise((resolve, reject) => {
         service
             .get(url,{
@@ -22,18 +22,97 @@ export function get(url, data,config={}) {
             })
     })
 }
-
+/**
+ * 封装post请求 application/json
+ * @param url
+ * @param body
+ * @returns {Promise}
+ */
+export function postJSON(url, data, config) {
+    console.log(data);
+    return new Promise((resolve, reject) => {
+        service
+            .post(url, data, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                ...config
+            })
+            .then(res => {
+                resolve(res.data)
+            })
+            .catch(err => {
+                reject(err)
+            })
+    })
+}
+export function postJSONString(url, data, config) {
+    return new Promise((resolve, reject) => {
+        service
+            .post(url, data, {
+                transformRequest: [function(data) {
+                    data = JSON.stringify(data)
+                    return data
+                }],
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                ...config
+            })
+            .then(res => {
+                resolve(res.data)
+            })
+            .catch(err => {
+                reject(err)
+            })
+    })
+}
+/**
+ * 封装formData请求
+ * @param url
+ * @param body
+ * @returns {Promise}
+ */
+export function postFormData(url, data, config) {
+    return new Promise((resolve, reject) => {
+        service
+            .post(url, data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                },
+                ...config
+            })
+            .then(res => {
+                resolve(res.data)
+            })
+            .catch(err => {
+                reject(err)
+            })
+    })
+}
 /**
  * 封装post请求
  * @param url
  * @param body
  * @returns {Promise}
  */
-export function post(url, data,config) {
-    url='/api'+url
+export function post(url, data, config) {
+    data = data || {};
     return new Promise((resolve, reject) => {
         service
-            .post(url, data,config)
+            .post(url, data, {
+                transformRequest: [function(data) {
+
+                    data = qs.stringify(data)
+
+
+                    return data
+                }],
+                headers: {
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                ...config
+            })
             .then(res => {
                 resolve(res.data)
             })
